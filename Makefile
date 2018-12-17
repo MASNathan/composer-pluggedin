@@ -23,4 +23,6 @@ push: tag build
 .PHONY: tag
 tag:
 	git tag $(NEXT_VERSION)
+	git commit -am "Version Upgrade"
+	git push
 	git push --tags
