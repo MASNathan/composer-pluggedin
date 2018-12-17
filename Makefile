@@ -1,6 +1,6 @@
 VERSION         := $(shell version)
 NEXT_VERSION    := $(shell version increment 0.0.1)
-PROJECT_NAME		:= masnathan/composer-pluggedin
+PROJECT_NAME    := masnathan/composer-pluggedin
 CONTAINER_NAME	:= composer
 
 .PHONY: build
