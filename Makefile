@@ -16,7 +16,7 @@ deploy: build
 	docker run --name=$(CONTAINER_NAME) -it -d --dns=1.1.1.1 --dns=1.0.0.1 $(PROJECT_NAME):$(NEXT_VERSION)
 
 .PHONY: push
-push: tag build
+push: build
 	docker push $(PROJECT_NAME):$(NEXT_VERSION)
 	docker push $(PROJECT_NAME):latest
 
