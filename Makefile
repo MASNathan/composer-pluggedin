@@ -33,3 +33,7 @@ upgrade-composer:
 
 .PHONY: upgrade
 upgrade: upgrade-composer push tag
+
+.PHONY: test
+test:
+	docker run --rm --interactive --tty --volume $PWD:/app --volume ${COMPOSER_HOME:-$HOME/.composer}:/tmp $(PROJECT_NAME):latest --version
