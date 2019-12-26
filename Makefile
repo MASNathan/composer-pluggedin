@@ -26,3 +26,10 @@ tag:
 	git commit -am "Version Upgrade"
 	git push
 	git push --tags
+
+.PHONY: upgrade-composer
+upgrade-composer:
+	docker pull composer:latest
+
+.PHONY: upgrade
+upgrade: upgrade-composer push tag
